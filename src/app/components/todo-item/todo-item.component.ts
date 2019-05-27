@@ -9,9 +9,23 @@ import { Todo } from 'src/app/models/todo';
 export class TodoItemComponent implements OnInit {
   @Input() todo: Todo;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  setClasses() {
+    const classes = {
+      todo: true,
+      'is-completed': this.todo.completed
+    };
+    return classes;
   }
 
+  onToggle(todo) {
+    todo.completed = !todo.completed;
+  }
+
+  onDelete(todo) {
+    console.log('delete');
+  }
 }

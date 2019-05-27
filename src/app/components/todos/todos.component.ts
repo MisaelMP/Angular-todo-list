@@ -7,27 +7,27 @@ import { Todo } from '../../models/todo';
   styleUrls: ['./todos.component.less']
 })
 export class TodosComponent implements OnInit {
-	todos:Todo[];
+  todos: Todo[];
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
-	  this.todos = [ 
-		  {
-			  id: 1,
-			  title: "Todo One",
-			  completed: false
-		  },
-		  {
-			  id: 2,
-			  title: "Todo Two",
-			  completed: true
-		  },
-		  {
-			  id: 2,
-			  title: "Todo Three",
-			  completed: false
-		  }
-	  ]
+    this.todos = [
+      {
+        id: 1,
+        title: 'Todo One',
+        completed: false
+      },
+      {
+        id: 2,
+        title: 'Todo Two',
+        completed: false
+      },
+      {
+        id: 2,
+        title: 'Todo Three',
+        completed: false
+      }
+    ];
   }
 }
